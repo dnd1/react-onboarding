@@ -1,0 +1,26 @@
+
+.todoContainer {
+    width: 100%;
+}
+
+.todoCheck {
+    max-width: 24px;
+    padding: 6px;
+}
+.todoInput {
+    margin: 4px;
+    padding: 12px;
+    width: calc(100% - 100px);
+    border: 0px;
+    border-radius: 3px;
+    background-color: #e6e6e6;
+}
+.deleteButton {
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    vertical-align: middle;
+    border: none;
+    border-radius: 3px;
+}
