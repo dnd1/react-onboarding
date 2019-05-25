@@ -31,3 +31,43 @@
     transform: rotate(360deg);
   }
 }
+.button {
+  padding: 1rem;
+  margin: 2rem auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: lightseagreen;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+  text-align: left;
+}
+
+.addTodoBtn {
+  padding: .5rem;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: lightseagreen;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  display: block;
+}
+
+.searchInput {
+  padding: .5rem;
+  margin: .5rem auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todoList {
+  padding: 2rem;
+}
