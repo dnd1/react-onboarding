@@ -1,7 +1,13 @@
 import * as React from 'react'
 import './styles.css'
+import Todo from '../../models/Todo';
 
-const TodoItem = (props: {id: number, done: boolean, text: string, onChange: (i: {name: string, value: string | boolean}) => void, onDelete: () => any }) => {
+export interface TodoItemProps extends Todo {
+  onChange: (i: {name: string, value: string | boolean}) => void;
+  onDelete: () => any
+}
+
+const TodoItem = (props: TodoItemProps ) => {
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       props.onChange({

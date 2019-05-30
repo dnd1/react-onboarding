@@ -1,7 +1,13 @@
 import * as React from 'react'
 import TodoItem from '../TodoItem/index';
+import Todo from '../../models/Todo';
 
-const TodoList = (props: {todos: any[], setTodos: (a:any[]) => any}) => {
+export interface TodoListProps {
+  todos: Todo[],
+  setTodos: (todos: Todo[]) => any
+}
+
+const TodoList = (props: TodoListProps) => {
 
     const [todos, setTodos] = React.useState(props.todos) 
 
@@ -28,9 +34,9 @@ const TodoList = (props: {todos: any[], setTodos: (a:any[]) => any}) => {
       }
     }
   
-    const todoElements = todos.map((t:any, i:number) => <TodoItem 
+    const todoElements = todos.map((t:Todo, i:number) => <TodoItem 
       key={i}
-      id={i}
+      id={i + ""}
       done={t.done}
       text={t.text}
       onChange={onChange(i)}
@@ -48,7 +54,8 @@ const TodoList = (props: {todos: any[], setTodos: (a:any[]) => any}) => {
     }
   
     const onAddTodo = (e: React.MouseEvent<HTMLButtonElement>) => {
-      props.setTodos([...props.todos, {text: '', done: false}])
+      const newTodo:Todo = {text: '', done: false}
+      props.setTodos([...props.todos, newTodo])
     }
   
     return (
